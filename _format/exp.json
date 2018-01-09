@@ -1,0 +1,24 @@
+{
+	"<PUT YOUR SECTION NAME HERE>": [
+		{
+			"title": "<PUT YOUR TITLE HERE>",
+			"subtitle": "<PUT YOUR SUBTITLE HERE>",
+			"date-range": "<PUT YOUR DATE RANGE HERE>",
+			"order": null,
+			"content": [
+				{
+					"type": "paragraph",
+					"text": "<PUT YOUR TEXT HERE>"
+				},
+				{
+					"type": "list",
+					"bullet": "full-circle",
+					"list": [
+						"<PUT YOUR FIRST ITEM HERE>",
+						"<PUT YOUR SECOND ITEM HERE>"
+					]
+				}
+			]
+		}
+	]
+}
