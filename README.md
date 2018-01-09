@@ -1,3 +1,4 @@
 # Digital Resume
 
-This is the repo for the [digital resume](http://michael-tu.github.io/resume/index.html) located at my website.
+This is the digital version of resume that can be found under [digital-resume.tugan.me](http://digital-resume.tugan.me)
+
