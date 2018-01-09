@@ -189,7 +189,7 @@
 	}
 
 /* ==========================================================================
-   handleContactForm - validate and ajax submit contat form
+   handleContactForm - validate and ajax submit contact form
    ========================================================================== */
 
 	function handleContactForm() {
@@ -206,9 +206,6 @@
 						required: true,
 						email: true
 					},
-					subject: {
-						required: true
-					},
 					message: {
 						required: true
 					}
@@ -221,19 +218,19 @@
 						required: "Field is required!",
 						email: "Please enter a valid email address"
 					},
-					subject: {
-						required: "Field is required!"
-					},
 					message: {
 						required: "Field is required!"
 					}
 				},
 				submitHandler: function(form) {
+					form.preventDefault();
 					var result;
 					$(form).ajaxSubmit({
 						type: "POST",
+						method: "POST",
+						url: "https://formspree.io/tugan0329@gmail.com", 
 						data: $(form).serialize(),
-						url: "_layout/php/send.php",
+						dataType: "json",
 						success: function(msg) {
 							
 							if (msg == 'OK') {
@@ -246,7 +243,6 @@
 		
 						},
 						error: function() {
-		
 							result = '<div class="alert error"><i class="fa fa-times-circle"></i>There was an error sending the message!</div>';
 							$("#formstatus").html(result);
 		
