@@ -1,5 +1,5 @@
 all:
-	@echo "MAKE YOUR CHOICES:\nmake run/status/commit/commit-all/amend/amend-all/deploy/add-unstaged/add-all"
+	@echo "MAKE YOUR CHOICES:\nmake run/status/commit/commit-all/amend/amend-all/deploy/add-unstaged/add-all/master/heroku/push"
 
 run:
 	open index.html
@@ -27,8 +27,17 @@ amend: add-unstaged
 amend-all: add-all
 	git commit -amend
 
-deploy:
+push: commit
+	git push
+
+deploy: push
 	git checkout heroku
 	git merge master -m "merge changes from master for new deployment"
 	git push
 	git checkout master
+
+master:
+	git checkout master
+
+heroku:
+	git checkout heroku
